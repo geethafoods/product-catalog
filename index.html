@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --green: #1A6B3C;
+            --green-dark: #0E4526;
+            --green-light: #E8F5EE;
+            --green-accent: #7EDBA4;
+            --ice: #D6EEF8;
+            --ice-dark: #2A7FAF;
+            --cream: #FAFAF7;
+            --wa: #25D366;
+            --bs-primary: #1A6B3C;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--green) !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #fff !important;
+        }
+
+        .navbar-brand span {
+            color: var(--green-accent);
+        }
+
+        .btn-wa-header {
+            background: var(--wa);
+            color: #fff;
+            border: none;
+            font-size: .85rem;
+            font-weight: 500;
+            border-radius: 999px;
+            padding: 7px 16px;
+        }
+
+        .btn-wa-header:hover {
+            background: #1db954;
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, .3);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            color: #fff;
+            padding: 72px 0 60px;
+        }
+
+        .hero-tag {
+            font-size: .75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--green-accent);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            color: #B8D9C7;
+        }
+
+        .hero .badge {
+            background: rgba(255, 255, 255, .12) !important;
+            border: 1px solid rgba(255, 255, 255, .2);
+            font-size: .78rem;
+            font-weight: 400;
+            padding: 6px 14px;
+            border-radius: 999px;
+        }
+
+        /* SEARCH */
+        .search-wrap {
+            position: relative;
+        }
+
+        .search-wrap .bi-search {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #adb5bd;
+            font-size: 1rem;
+        }
+
+        #search-input {
+            padding-left: 40px;
+            padding-right: 36px;
+            border-radius: 12px;
+            border: 1.5px solid #dee2e6;
+            font-size: .9rem;
+        }
+
+        #search-input:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(26, 107, 60, .1);
+        }
+
+        #search-clear {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dee2e6;
+            border: none;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: .7rem;
+            color: #6c757d;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #search-clear.visible {
+            display: flex;
+        }
+
+        /* FILTER PILLS */
+        .filter-btn {
+            border-radius: 999px;
+            font-size: .82rem;
+            font-weight: 500;
+            border: 1.5px solid #dee2e6;
+            color: #495057;
+            background: #fff;
+            padding: 6px 18px;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff;
+        }
+
+        /* SECTION HEADING */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .badge-fresh {
+            background: var(--green-light) !important;
+            color: var(--green) !important;
+            font-size: .7rem;
+            letter-spacing: .5px;
+        }
+
+        .badge-frozen {
+            background: var(--ice) !important;
+            color: var(--ice-dark) !important;
+            font-size: .7rem;
+            letter-spacing: .5px;
+        }
+
+        /* CARDS */
+        .product-card {
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: box-shadow .2s, transform .2s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .09);
+            transform: translateY(-3px);
+        }
+
+        .card-img-wrap {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-cat {
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cat-fresh {
+            color: var(--green);
+        }
+
+        .cat-frozen {
+            color: var(--ice-dark);
+        }
+
+        .card-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+
+        .card-desc {
+            font-size: .82rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        .card-price {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--green);
+        }
+
+        .card-unit {
+            font-size: .72rem;
+            color: #adb5bd;
+        }
+
+        .btn-wa {
+            background: var(--wa);
+            color: #fff;
+            border: none;
+            font-size: .8rem;
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 7px 14px;
+            white-space: nowrap;
+        }
+
+        .btn-wa:hover {
+            background: #1db954;
+            color: #fff;
+        }
+
+        /* NO RESULTS */
+        #no-results {
+            display: none;
+            padding: 56px 0;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a1a1a;
+            color: #9CA3AF;
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+
+        footer a {
+            color: var(--wa);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .ig-link {
+            color: #E1306C !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md sticky-top px-3 px-md-4">
+        <a class="navbar-brand" id="nav-brand" href="#"><span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <a class="btn btn-wa-header mt-2 mt-md-0" id="header-wa" href="#" target="_blank">
+                <i class="bi bi-whatsapp me-1"></i> Chat with Us
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tag mb-2" id="hero-tag"></div>
+            <h1 class="mb-3" id="hero-title"></h1>
+            <p class="mb-4 col-md-7" id="hero-desc"></p>
+            <div class="d-flex flex-wrap gap-2" id="hero-badges"></div>
+        </div>
+    </section>
+
+    <!-- SEARCH + FILTER -->
+    <div class="container mt-4">
+        <div class="row g-3 align-items-center">
+            <div class="col-12 col-md-5">
+                <div class="search-wrap">
+                    <i class="bi bi-search"></i>
+                    <input id="search-input" type="search" class="form-control"
+                        placeholder="Search products, categories…" autocomplete="off" />
+                    <button id="search-clear">✕</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 d-flex gap-2 flex-wrap">
+                <span class="text-muted small align-self-center">Filter:</span>
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="fresh"><i class="bi bi-flower1 me-1"></i>Fresh</button>
+                <button class="filter-btn" data-filter="frozen"><i class="bi bi-snow me-1"></i>Frozen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NO RESULTS -->
+    <div id="no-results" class="container">
+        <div class="fs-1">🔍</div>
+        <strong class="d-block text-dark">No products found</strong>
+        <span id="no-results-msg"></span>
+    </div>
+
+    <!-- FRESH SECTION -->
+    <div class="container mt-4" id="section-fresh">
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <h2 class="section-title mb-0">Fresh Products</h2>
+            <span class="badge badge-fresh text-uppercase">🌿 Fresh</span>
+        </div>
+        <div class="row g-4" id="grid-fresh"></div>
+    </div>
+
+    <hr class="container mt-4" id="divider" />
+
+    <!-- FROZEN SECTION -->
+    <div class="container my-4" id="section-frozen">
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <h2 class="section-title mb-0">Frozen Products</h2>
+            <span class="badge badge-frozen text-uppercase">❄️ Frozen</span>
+        </div>
+        <div class="row g-4" id="grid-frozen"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center" id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function waLink(number, message) {
+            return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+        }
+
+        function buildCard(product, waNumber) {
+            const isFresh = product.category === 'fresh';
+            const catClass = isFresh ? 'cat-fresh' : 'cat-frozen';
+            const label = isFresh ? 'Fresh' : 'Frozen';
+            const price = Number(product.price).toFixed(0);
+            const seed = encodeURIComponent(product.name);
+            const placeholder = `https://placehold.co/400x300/e8f5ee/1a6b3c?text=${seed}&font=poppins`;
+            const imgSrc = product.image || placeholder;
+            const orderMsg = `Hi! I'd like to order ${product.name}`;
+
+            return `
+      <div class="col-12 col-sm-6 col-lg-3 card-wrap" data-cat="${product.category}">
+        <div class="card product-card border-0 shadow-sm">
+          <div class="card-img-wrap">
+            <img src="${imgSrc}" alt="${product.name}" loading="lazy"
+                 onerror="this.src='${placeholder}'"/>
+          </div>
+          <div class="card-body d-flex flex-column gap-1 pb-2">
+            <span class="card-cat ${catClass}">${label} · ${product.subcategory}</span>
+            <div class="card-name">${product.name}</div>
+            <div class="card-desc flex-grow-1">${product.description}</div>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between pt-0 pb-3 px-3">
+            <div class="card-price">Rs&nbsp;${price} <span class="card-unit">/ ${product.unit}</span></div>
+            <a class="btn btn-wa btn-sm" href="${waLink(waNumber, orderMsg)}" target="_blank">
+              <i class="bi bi-whatsapp me-1"></i>Order
+            </a>
+          </div>
+        </div>
+      </div>`;
+        }
+
+        function render(data) {
+            const c = data.company;
+            const wa = c.whatsapp;
+
+            // Navbar
+            document.title = `${c.name} — Product Catalog`;
+            const brand = document.getElementById('nav-brand');
+            const parts = c.name.trim().split(' ');
+            const last = parts.pop();
+            brand.innerHTML = `${parts.join(' ')} <span>${last}</span>`;
+            document.getElementById('header-wa').href = `https://wa.me/${wa}`;
+
+            // Hero
+            document.getElementById('hero-tag').textContent = `Product Catalog ${c.catalog_year || ''}`;
+            document.getElementById('hero-title').textContent = c.tagline;
+            document.getElementById('hero-desc').textContent = c.description;
+            const badgesEl = document.getElementById('hero-badges');
+            (c.badges || []).forEach(b => {
+                badgesEl.insertAdjacentHTML('beforeend', `<span class="badge">${b}</span>`);
+            });
+
+            // Products
+            const freshGrid = document.getElementById('grid-fresh');
+            const frozenGrid = document.getElementById('grid-frozen');
+            data.products.forEach(p => {
+                const html = buildCard(p, wa);
+                if (p.category === 'fresh') freshGrid.insertAdjacentHTML('beforeend', html);
+                if (p.category === 'frozen') frozenGrid.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Footer
+            const ig = c.instagram ? `&nbsp;|&nbsp; <a class="ig-link" href="https://instagram.com/${c.instagram}" target="_blank"><i class="bi bi-instagram me-1"></i>@${c.instagram}</a>` : '';
+            document.getElementById('footer').innerHTML = `
+      <strong>${c.name}</strong><br/>
+      <i class="bi bi-geo-alt me-1"></i>${c.address || ''}
+      ${c.phone ? `&nbsp;|&nbsp; <a href="tel:${c.phone}"><i class="bi bi-telephone me-1"></i>${c.phone}</a>` : ''}
+      ${c.email ? `&nbsp;|&nbsp; <a href="mailto:${c.email}"><i class="bi bi-envelope me-1"></i>${c.email}</a>` : ''}
+      &nbsp;|&nbsp; <a href="https://wa.me/${wa}" target="_blank"><i class="bi bi-whatsapp me-1"></i>WhatsApp Us</a>
+      ${ig}
+      <br/><br/>© ${new Date().getFullYear()} ${c.name}. All rights reserved.
+    `;
+
+            // ── State & Filters ───────────────────────────────────
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const sectionFresh = document.getElementById('section-fresh');
+            const sectionFrozen = document.getElementById('section-frozen');
+            const divider = document.getElementById('divider');
+            const searchInput = document.getElementById('search-input');
+            const searchClear = document.getElementById('search-clear');
+            const noResults = document.getElementById('no-results');
+            const noResultsMsg = document.getElementById('no-results-msg');
+
+            function applyFilters() {
+                const q = searchQuery.trim().toLowerCase();
+                let visibleFresh = 0, visibleFrozen = 0;
+
+                document.querySelectorAll('.card-wrap').forEach(card => {
+                    const cat = card.dataset.cat;
+                    const name = card.querySelector('.card-name').textContent.toLowerCase();
+                    const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                    const sub = card.querySelector('.card-cat').textContent.toLowerCase();
+                    const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+                    const matchesSearch = !q || name.includes(q) || desc.includes(q) || sub.includes(q);
+                    const visible = matchesFilter && matchesSearch;
+                    card.classList.toggle('hidden', !visible);
+                    if (visible && cat === 'fresh') visibleFresh++;
+                    if (visible && cat === 'frozen') visibleFrozen++;
+                });
+
+                sectionFresh.classList.toggle('hidden', visibleFresh === 0);
+                sectionFrozen.classList.toggle('hidden', visibleFrozen === 0);
+                divider.classList.toggle('hidden', visibleFresh === 0 || visibleFrozen === 0);
+
+                const total = visibleFresh + visibleFrozen;
+                noResults.style.display = total === 0 ? 'block' : 'none';
+                if (total === 0 && q) noResultsMsg.textContent = `No results for "${searchQuery}" — try a different keyword.`;
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.dataset.filter;
+                    applyFilters();
+                });
+            });
+
+            searchInput.addEventListener('input', () => {
+                searchQuery = searchInput.value;
+                searchClear.classList.toggle('visible', searchQuery.length > 0);
+                applyFilters();
+            });
+
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                searchQuery = '';
+                searchClear.classList.remove('visible');
+                searchInput.focus();
+                applyFilters();
+            });
+        }
+
+        // ── Data ──────────────────────────────────────────────────
+        fetch('data.json').then(r => r.json()).then(render);
+    </script>
+</body>
+
+</html>
