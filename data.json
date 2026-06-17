@@ -3,7 +3,7 @@
     "name": "GeethaFoods Co.",
     "tagline": "Fresh & Frozen Food Supply",
     "description": "Premium quality fresh and frozen produce for businesses and households. Browse our catalog and order directly via WhatsApp.",
-    "whatsapp": "1234567890",
+    "whatsapp": "911234567890",
     "phone": "+91 123 456 7890",
     "address": "123 Market Street, Kompally, Hyderabad",
     "email": "geetafoodsco@gmail.com",
@@ -14,14 +14,15 @@
       "📦 Bulk Orders Welcome",
       "🚚 Fast Delivery"
     ],
-    "catalog_year": "2026"
+    "catalog_year": "2026",
+    "about": "Geetha Foods is a leading food-service distribution company supplying premium products to restaurants, cafés, hotels, bakeries, and cloud kitchens. We partner with trusted brands such as ITC, Amul, Veeba, Del Monte, McCain, Milky Mist, Yummiez, Mala's, Fun Foods, and many more. With a diverse portfolio spanning frozen foods, dairy, beverages, sauces, and kitchen essentials, we provide a one-stop procurement solution for the hospitality industry. Our strong distribution network ensures consistent quality, timely deliveries, and reliable service. We are committed to helping food businesses streamline operations and enhance customer experiences. At Geetha Foods, we don't just supply products—we build lasting partnerships that drive growth."
   },
   "products": [
     {
       "id": 1,
       "name": "French Fries — Regular Cut",
-      "category": "fresh",
-      "subcategory": "Ready Meals",
+      "brand": "Brand A",
+      "category": "Ready Meals",
       "description": "Freshly cut potato fries, ready to cook. Made from premium-grade potatoes, uniform in size for even frying. Perfect for restaurants, cafes, and fast food outlets.",
       "price": 299,
       "unit": "pack"
@@ -29,8 +30,8 @@
     {
       "id": 2,
       "name": "French Fries — Signature Cut",
-      "category": "fresh",
-      "subcategory": "Ready Meals",
+      "brand": "Brand A",
+      "category": "Ready Meals",
       "description": "Our exclusive signature-cut fries — a unique style that sets your menu apart. Made from hand-selected premium potatoes, freshly cut daily. Delivers an exceptional texture and presentation that customers will remember.",
       "price": 349,
       "unit": "pack"
@@ -38,8 +39,8 @@
     {
       "id": 3,
       "name": "Frozen Momos",
-      "category": "frozen",
-      "subcategory": "Ready Meals",
+      "brand": "Brand B",
+      "category": "Ready Meals",
       "description": "Handcrafted steamed dumplings filled with seasoned vegetables and minced meat. Flash-frozen to lock in freshness. Available in packs of 20 pieces. Ready in minutes — steam, fry, or pan-toss.",
       "price": 699,
       "unit": "pack"
@@ -47,8 +48,8 @@
     {
       "id": 4,
       "name": "Fresh Potato Wedges",
-      "category": "fresh",
-      "subcategory": "Ready Meals",
+      "brand": "Brand A",
+      "category": "Ready Meals",
       "description": "Thick-cut skin-on potato wedges, freshly prepared daily. Seasoned with a light herb blend. Great for restaurants, pubs, and catering. Oven-bake or deep-fry ready.",
       "price": 349,
       "unit": "pack"
@@ -56,8 +57,8 @@
     {
       "id": 5,
       "name": "Fresh Tater Tots",
-      "category": "fresh",
-      "subcategory": "Ready Meals",
+      "brand": "Brand A",
+      "category": "Ready Meals",
       "description": "Bite-sized grated potato tots, freshly made and ready to fry or bake. Crispy on the outside, fluffy on the inside. A crowd favorite for kids menus and snack platters.",
       "price": 399,
       "unit": "pack"
@@ -65,8 +66,8 @@
     {
       "id": 6,
       "name": "Frozen Spring Rolls",
-      "category": "frozen",
-      "subcategory": "Ready Meals",
+      "brand": "Brand B",
+      "category": "Ready Meals",
       "description": "Crispy golden spring rolls filled with seasoned vegetables and glass noodles. Flash-frozen for maximum freshness. Deep-fry or air-fry straight from frozen. Available in packs of 10 pieces.",
       "price": 599,
       "unit": "pack"
