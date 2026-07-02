@@ -769,13 +769,8 @@
             </div>
             <div class="col-12">
                 <div class="d-flex flex-wrap gap-2 align-items-center">
-                    <span class="filter-label"><i class="bi bi-tag me-1"></i>Category:</span>
+                    <span class="filter-label"><i class="bi bi-funnel me-1"></i>Filter:</span>
                     <div id="category-filters" class="d-flex flex-wrap gap-2"></div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="d-flex flex-wrap gap-2 align-items-center">
-                    <span class="filter-label"><i class="bi bi-building me-1"></i>Brand:</span>
                     <div id="brand-filters" class="d-flex flex-wrap gap-2"></div>
                 </div>
             </div>
@@ -866,7 +861,7 @@
           <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
             <div class="d-flex align-items-center justify-content-between mb-2">
               <div class="card-price">Rs&nbsp;${price} <span class="card-unit">/ ${product.unit}</span></div>
-              <select class="qty-select" aria-label="Quantity">
+              <select class="qty-select" data-product-id="${product.id}" aria-label="Quantity">
                 ${[...Array(10).keys()].map(i => `<option value="${i + 1}">${i + 1}</option>`).join('')}
                 <option value="10+">10+</option>
               </select>
@@ -924,17 +919,17 @@
             });
 
             // Brand filters
-            const brands = ['All Brands', ...new Set(data.products.map(p => p.brand))];
+            const brands = [...new Set(data.products.map(p => p.brand))];
             const brandFilters = document.getElementById('brand-filters');
             brands.forEach(brand => {
                 const btn = document.createElement('button');
-                btn.className = 'filter-btn' + (brand === 'All Brands' ? ' active' : '');
+                btn.className = 'filter-btn';
                 btn.dataset.brand = brand;
                 btn.textContent = brand;
                 btn.addEventListener('click', () => {
                     brandFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    activeBrand = brand;
+                    activeBrand = brand === activeBrand ? 'All Brands' : brand;
                     applyFilters();
                 });
                 brandFilters.appendChild(btn);
@@ -1018,6 +1013,34 @@
                 updateCartBadge();
             }
 
+            // Sync card qty dropdown from cart state
+            function syncCardQty(productId, qty) {
+                const sel = document.querySelector(`.qty-select[data-product-id="${productId}"]`);
+                if (sel) sel.value = qty;
+            }
+
+            // Sync all card dropdowns from current cart state
+            function syncAllCardQtys() {
+                cart.forEach(item => syncCardQty(item.product.id, item.qty));
+                // Reset cards not in cart back to 1
+                document.querySelectorAll('.qty-select').forEach(sel => {
+                    const inCart = cart.find(i => String(i.product.id) === sel.dataset.productId);
+                    if (!inCart) sel.value = '1';
+                });
+            }
+
+            // When card qty dropdown changes, update cart if product is already in cart
+            grid.addEventListener('change', e => {
+                const sel = e.target.closest('.qty-select');
+                if (!sel) return;
+                const productId = parseInt(sel.dataset.productId);
+                const existing = cart.find(i => i.product.id === productId);
+                if (existing) {
+                    existing.qty = sel.value;
+                    renderCartItems();
+                }
+            });
+
             // Add to cart
             grid.addEventListener('click', e => {
                 const btn = e.target.closest('.btn-add-cart');
@@ -1055,10 +1078,12 @@
                         else cart[i].qty = String(cur - 1);
                     }
                     renderCartItems();
+                    syncAllCardQtys();
                 }
                 if (rem) {
                     cart.splice(parseInt(rem.dataset.idx), 1);
                     renderCartItems();
+                    syncAllCardQtys();
                 }
             });
 
