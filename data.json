@@ -19,15 +19,6 @@
   },
   "products": [
     {
-      "id": 1,
-      "name": "Frozen Chicken",
-      "brand": "",
-      "category": "Frozen Foods",
-      "description": "Premium quality frozen chicken, hygienically processed and quick-frozen to preserve freshness and flavor. Ideal for preparing a variety of dishes including curries, grills, and fried recipes.",
-      "price": 720,
-      "unit": "2kg"
-    },
-    {
       "id": 2,
       "name": "Veg Mayonnaise",
       "brand": "Tasty Pixel",
