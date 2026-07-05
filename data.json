@@ -4,7 +4,7 @@
     "tagline": "Fresh & Frozen Food Supply",
     "description": "Premium quality fresh and frozen produce for businesses and households. Browse our catalog and order directly via WhatsApp.",
     "whatsapp": "919948695861",
-    "phone": "+91 8074431476",
+    "phone": "+91 9948695861",
     "address": "Kompally, Hyderabad",
     "email": "info.geethafoods@gmail.com",
     "instagram": "geethafoods_hyd",
@@ -18,6 +18,15 @@
     "about": "Geetha Foods is a leading food-service distribution company supplying premium products to restaurants, cafés, hotels, bakeries, and cloud kitchens. We partner with trusted brands such as ITC, Amul, Veeba, Del Monte, McCain, Milky Mist, Yummiez, Mala's, Fun Foods, and many more. With a diverse portfolio spanning frozen foods, dairy, beverages, sauces, and kitchen essentials, we provide a one-stop procurement solution for the hospitality industry. Our strong distribution network ensures consistent quality, timely deliveries, and reliable service. We are committed to helping food businesses streamline operations and enhance customer experiences. At Geetha Foods, we don't just supply products—we build lasting partnerships that drive growth."
   },
   "products": [
+    {
+      "id": 1,
+      "name": "Frozen Chicken 2kgs",
+      "brand": "Generic",
+      "category": "Frozen Foods",
+      "description": "Premium quality whole frozen chicken packed in a convenient 2kg size. Freshly frozen to lock in tenderness and flavor, ideal for bulk kitchen preparation, roasting, or curries.",
+      "price": 720,
+      "unit": "2kg"
+    },
     {
       "id": 2,
       "name": "Veg Mayonnaise",
@@ -372,11 +381,290 @@
     {
       "id": 41,
       "name": "French Fries",
-      "brand": "HPC",
+      "brand": "Geetha Foods",
       "category": "Frozen Foods",
-      "description": "Premium frozen French fries made from carefully selected potatoes for consistent quality and crispiness. Ready to fry or bake for a delicious snack or side dish.",
+      "description": "Premium fresh frozen French fries made from carefully selected potatoes for consistent quality and crispiness without any chemicals/preservatives. Ready to fry or bake for a delicious snack or side dish.",
       "price": 145,
-      "unit": "pack"
-    }
-  ]
+      "unit": "kg"
+    },
+    {
+    "id": 42,
+    "name": "ADP Paneer Momos zippy 500 gms",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Premium frozen momos filled with fresh minced paneer and savory herbs. Ready to steam or fry for a fast, delicious vegetarian snack.",
+    "price": 190,
+    "unit": "pack"
+  },
+  {
+    "id": 43,
+    "name": "ADP zippy veg momos 500 Gms",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Delicious steamed vegetable dumplings with a savory mix of fresh greens. Quick-frozen to seal in authentic flavor and moisture.",
+    "price": 150,
+    "unit": "pack"
+  },
+  {
+    "id": 44,
+    "name": "ADP Chicken Breakfast Sausage 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Tender, juicy breakfast sausages made from finely minced chicken and choice seasoning spices. Perfect for breakfast platters or rolls.",
+    "price": 300,
+    "unit": "pack"
+  },
+  {
+    "id": 45,
+    "name": "ADP Chicken Breaded Lollipop 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Crispy, breaded chicken lollipops designed for commercial kitchen frying. Features premium cuts with a golden, crunchy outer coat.",
+    "price": 430,
+    "unit": "pack"
+  },
+  {
+    "id": 46,
+    "name": "ADP Chicken Breaded wings 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Seasoned chicken wings coated in light, crispy golden breadcrumbs. Ready to deep fry or bake as a delicious restaurant starter.",
+    "price": 420,
+    "unit": "pack"
+  },
+  {
+    "id": 47,
+    "name": "ADP Chicken Breaded strips 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Crunchy breaded chicken breast strips prepared for consistent texture and flavor. Ideal for appetizer platters, sliders, or kids' menus.",
+    "price": 420,
+    "unit": "pack"
+  },
+  {
+    "id": 48,
+    "name": "ADP Chicken Bites 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Bite-sized chunks of tender chicken meat lightly seasoned and coated. High-yield convenience product for snacks, quick meals, or appetizers.",
+    "price": 380,
+    "unit": "pack"
+  },
+  {
+    "id": 49,
+    "name": "ADP Zippy Potato Mini kieves 1kg",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Miniature savory potato bites infused with aromatic butter, herbs, and garlic filling. Perfect crowd-pleasing finger food or side dish.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 50,
+    "name": "ADP zippy Chicken kieves 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Classic breaded chicken kiev pieces stuffed with rich garlic herb butter. Perfectly crispy on the outside and bursting with hot butter inside.",
+    "price": 390,
+    "unit": "pack"
+  },
+  {
+    "id": 51,
+    "name": "ADP zippy Chicken popcorn 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Miniature breaded chicken popcorn snacks with a peppery crunch. Convenient quick-fry item optimized for high-volume quick service restaurants.",
+    "price": 350,
+    "unit": "pack"
+  },
+  {
+    "id": 52,
+    "name": "ADP(zippy) Chicken Burger patty 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Seasoned, savory chicken burger patties with excellent texture retention. Ready-to-cook pack designed specifically for commercial grills and fryers.",
+    "price": 350,
+    "unit": "pack"
+  },
+  {
+    "id": 53,
+    "name": "ADP(zippy) Veg Burger Patty",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Crispy vegetarian burger patties packed with a selection of real vegetables and Indian spices. Easy to grill or shallow fry.",
+    "price": 220,
+    "unit": "pack"
+  },
+  {
+    "id": 54,
+    "name": "ADP(zippy)Chicken cheese garlic finger 1 kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Delicious snack fingers combining minced chicken, rich cheese, and sharp garlic notes. Encased in a golden-brown crispy crust.",
+    "price": 350,
+    "unit": "pack"
+  },
+  {
+    "id": 55,
+    "name": "ADP(zippy) Crunchy Chicken Nuggets 1kg",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Premium 1kg wholesale package of crunchy breaded chicken nuggets. Stays crisp for a long time, perfect for fast-food operations.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 56,
+    "name": "ADP (Zippy) Chicken Popcorn",
+    "brand": "ADP",
+    "category": "Frozen Foods",
+    "description": "Delicious bite-sized crisp chicken bits with a savory breading coat. Quick to fry and pair with commercial dipping sauces.",
+    "price": 350,
+    "unit": "pack"
+  },
+  {
+    "id": 57,
+    "name": "ADP Zippy Veg spring rolls 1kg 40 pcs",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Crispy oriental vegetable spring rolls packed with thinly sliced fresh carrots, cabbage, and sprouts. Pack contains 40 pre-rolled uniform pieces.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 58,
+    "name": "ADP Zippy Veg Nuggets",
+    "brand": "ADP",
+    "category": "Frozen Snacks",
+    "description": "Vegetable-based crunchy nuggets crafted from quality potatoes, corn, and greens. Golden crunchy shell with an airy seasoned core.",
+    "price": 240,
+    "unit": "pack"
+  },
+  {
+    "id": 59,
+    "name": "VB Cheese and jalapeno dip",
+    "brand": "VB",
+    "category": "Dips",
+    "description": "Zesty, rich cheese-based sauce infusing tangy jalapeño pepper bits. Ideal pairing for Mexican dishes, hot fries, or burger toppings.",
+    "price": 175,
+    "unit": "pack"
+  },
+  {
+    "id": 60,
+    "name": "ITC Aloo Tikki 1.5KG",
+    "brand": "ITC",
+    "category": "Frozen Snacks",
+    "description": "Traditional crispy golden aloo tikkis made from mashed potatoes blended with local spices. Large 1.5kg bulk configuration built for event catering.",
+    "price": 270,
+    "unit": "pack"
+  },
+  {
+    "id": 61,
+    "name": "Hungritoes Chilli Garlic Potato shotz",
+    "brand": "Hungritoes",
+    "category": "Frozen Snacks",
+    "description": "Zesty bite-sized potato snacks seasoned with a robust blend of red chili flakes and pungent garlic. Explodes with hot flavor upon deep frying.",
+    "price": 270,
+    "unit": "pack"
+  },
+  {
+    "id": 62,
+    "name": "ITC Batata vada",
+    "brand": "ITC",
+    "category": "Frozen Snacks",
+    "description": "Authentic Mumbai-style batata vadas filled with spiced mashed potato balls coated inside a thick gram flour batter shell.",
+    "price": 200,
+    "unit": "pack"
+  },
+  {
+    "id": 63,
+    "name": "mccain onion rings",
+    "brand": "McCain",
+    "category": "Frozen Snacks",
+    "description": "Sweet, uniform fresh onion rings enveloped in a light crunchy specialty batter. Stays crisp and perfect for gourmet burgers or appetizer platters.",
+    "price": 260,
+    "unit": "pack"
+  },
+  {
+    "id": 64,
+    "name": "Hungritoes 9MM",
+    "brand": "Hungritoes",
+    "category": "Frozen Foods",
+    "description": "Classic 9mm steakhouse-cut premium frozen french fries. Offers maximum internal fluffy potato flesh and consistent outer crispiness.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 65,
+    "name": "Hungritoes 6MM",
+    "brand": "Hungritoes",
+    "category": "Frozen Foods",
+    "description": "Thin, fast-frying 6mm shoestring style frozen french fries. Maximizes plate coverage and yields extra crunch per serving portion.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 66,
+    "name": "frozen sweetcorn",
+    "brand": "Generic",
+    "category": "Frozen Foods",
+    "description": "Tender and naturally sweet whole corn kernels, individually quick-frozen to preserve peak freshness and golden color.",
+    "price": 75,
+    "unit": "pack"
+  },
+  {
+    "id": 67,
+    "name": "ITC Veg Burger Patty Regular",
+    "brand": "ITC",
+    "category": "Frozen Snacks",
+    "description": "Standard size seasoned vegetable burger patties. An essential high-volume product option perfect for neighborhood cafes and student diners.",
+    "price": 192,
+    "unit": "pack"
+  },
+  {
+    "id": 68,
+    "name": "Mccain Favourita 9mm",
+    "brand": "McCain",
+    "category": "Frozen Foods",
+    "description": "High-yield 9mm potato fries designed for continuous catering operations. Features extended hot-holding capabilities without turning soggy.",
+    "price": 320,
+    "unit": "pack"
+  },
+  {
+    "id": 69,
+    "name": "450 ml Containers",
+    "brand": "Generic",
+    "category": "Kitchen Supplies",
+    "description": "Durable, food-grade clear plastic containers with secure lids. Ideal for portion control, packaging hot gravies, takeaways, or food storage.",
+    "price": 220,
+    "unit": "pack"
+  },
+  {
+    "id": 70,
+    "name": "oregano veeba 300 pcs",
+    "brand": "Veeba",
+    "category": "Sauces & Condiments",
+    "description": "Wholesale distribution box containing 300 individual pizza-cut single-use oregano seasoning sachets. Crucial for cloud kitchens and pizza chains.",
+    "price": 175,
+    "unit": "pack"
+  },
+  {
+    "id": 71,
+    "name": "chilli flakes veeba 300pcs",
+    "brand": "Veeba",
+    "category": "Sauces & Condiments",
+    "description": "Wholesale catering box containing 300 single-portion dry crushed red chili flake sachets. Premium grade, dried to maximize flavor heat.",
+    "price": 170,
+    "unit": "pack"
+  },
+  {
+    "id": 72,
+    "name": "foodrite mayo sachets 8gms",
+    "brand": "Foodrite",
+    "category": "Sauces & Spreads",
+    "description": "Individual 8g takeaway sachets of smooth and creamy commercial mayo. Designed specifically to reduce serving wastage in quick-delivery meals.",
+    "price": 175,
+    "unit": "pack"
+  },
+ ]
 }
