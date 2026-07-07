@@ -356,18 +356,6 @@
             display: block;
         }
 
-        .card-brand {
-            font-size: .68rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--green);
-            background: var(--green-light);
-            padding: 3px 10px;
-            border-radius: 999px;
-            display: inline-block;
-        }
-
         .card-category {
             font-size: .72rem;
             color: #6c757d;
@@ -771,7 +759,6 @@
                 <div class="d-flex flex-wrap gap-2 align-items-center">
                     <span class="filter-label"><i class="bi bi-funnel me-1"></i>Filter:</span>
                     <div id="category-filters" class="d-flex flex-wrap gap-2"></div>
-                    <div id="brand-filters" class="d-flex flex-wrap gap-2"></div>
                 </div>
             </div>
         </div>
@@ -851,11 +838,8 @@
             <img src="${imgSrc}" alt="${product.name}" loading="lazy" onerror="this.src='${placeholder}'"/>
           </div>
           <div class="card-body d-flex flex-column gap-2 pb-2">
-            <div class="d-flex align-items-center gap-2">
-              <span class="card-brand">${product.brand}</span>
-              <span class="card-category"><i class="bi bi-tag me-1"></i>${product.category}</span>
-            </div>
-            <div class="card-name">${product.name}</div>
+            <span class="card-category"><i class="bi bi-tag me-1"></i>${product.category}</span>
+            <div class="card-name">${product.brand} ${product.name}</div>
             <div class="card-desc flex-grow-1">${product.description}</div>
           </div>
           <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
@@ -916,23 +900,6 @@
                     applyFilters();
                 });
                 catFilters.appendChild(btn);
-            });
-
-            // Brand filters
-            const brands = [...new Set(data.products.map(p => p.brand))];
-            const brandFilters = document.getElementById('brand-filters');
-            brands.forEach(brand => {
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.dataset.brand = brand;
-                btn.textContent = brand;
-                btn.addEventListener('click', () => {
-                    brandFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    activeBrand = brand === activeBrand ? 'All Brands' : brand;
-                    applyFilters();
-                });
-                brandFilters.appendChild(btn);
             });
 
             // Footer
@@ -999,8 +966,8 @@
                     el.innerHTML = `
           <img class="cart-item-img" src="${imgSrc}" alt="${item.product.name}" onerror="this.src='${placeholder}'"/>
           <div class="cart-item-info">
-            <div class="cart-item-name">${item.product.name}</div>
-            <div class="cart-item-brand">${item.product.brand} · ${item.product.category}</div>
+            <div class="cart-item-name">${item.product.brand} ${item.product.name}</div>
+            <div class="cart-item-brand">${item.product.category}</div>
             <div class="cart-item-qty">
               <button class="qty-btn" data-action="dec" data-idx="${i}">−</button>
               <span class="qty-val">${item.qty}</span>
@@ -1090,7 +1057,7 @@
             // Send order
             btnSend.addEventListener('click', () => {
                 if (cart.length === 0) return;
-                const lines = cart.map(i => `• ${i.product.name} x${i.qty}`).join('\n');
+                const lines = cart.map(i => `• ${i.product.brand} ${i.product.name} x${i.qty}`).join('\n');
                 const note = cartNote.value.trim();
                 const msg = `Hi! I'd like to place an order:\n\n${lines}${note ? '\n\nNote: ' + note : ''}\n\nPlease confirm availability and pricing. Thank you!`;
                 window.open(waLink(wa, msg), '_blank');
@@ -1098,7 +1065,6 @@
 
             // ── Filters & Search ──────────────────────────────────
             let activeCategory = 'All';
-            let activeBrand = 'All Brands';
             let searchQuery = '';
 
             const searchInput = document.getElementById('search-input');
@@ -1112,9 +1078,8 @@
                 let visible = 0;
                 document.querySelectorAll('.card-wrap').forEach(card => {
                     const matchesCat = activeCategory === 'All' || card.dataset.category === activeCategory;
-                    const matchesBrand = activeBrand === 'All Brands' || card.dataset.brand === activeBrand;
                     const matchesSearch = !q || card.dataset.name.includes(q) || card.dataset.desc.includes(q) || card.dataset.category.toLowerCase().includes(q) || card.dataset.brand.toLowerCase().includes(q);
-                    const show = matchesCat && matchesBrand && matchesSearch;
+                    const show = matchesCat && matchesSearch;
                     card.classList.toggle('hidden', !show);
                     if (show) visible++;
                 });
