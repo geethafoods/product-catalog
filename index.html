@@ -1016,13 +1016,13 @@
                 cartItemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
 
                 cart.forEach((item, i) => {
-                    const seed = encodeURIComponent(item.product.name);
+                    const seed = encodeURIComponent(item.product.brand + ' ' + item.product.name);
                     const placeholder = `https://placehold.co/52x52/e8f5ee/1a6b3c?text=${seed}&font=poppins`;
                     const imgSrc = item.product.image || placeholder;
                     const el = document.createElement('div');
                     el.className = 'cart-item';
                     el.innerHTML = `
-          <img class="cart-item-img" src="${imgSrc}" alt="${item.product.brand} ${item.product.name}" onerror="this.src='${placeholder}'"/>
+          <img class="cart-item-img" src="${imgSrc}" alt="${item.product.name}" onerror="this.src='${placeholder}'"/>
           <div class="cart-item-info">
             <div class="cart-item-name">${item.product.brand} ${item.product.name}</div>
             <div class="cart-item-brand">${item.product.category}</div>
