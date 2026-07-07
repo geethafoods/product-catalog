@@ -271,6 +271,12 @@
             box-shadow: 0 0 0 3px rgba(26, 107, 60, .1);
         }
 
+        #search-input::-webkit-search-cancel-button,
+        #search-input::-webkit-search-decoration {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
         #search-clear {
             position: absolute;
             right: 10px;
@@ -664,7 +670,6 @@
         /* CUSTOM REQUEST */
         .custom-request {
             background: #fff;
-            border: 1.5px dashed #c3e6d0;
             border-radius: 16px;
             padding: 24px;
             text-align: center;
@@ -740,7 +745,8 @@
     <!-- BULK BANNER -->
     <div class="bulk-banner">
         <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
-            <p><i class="bi bi-boxes me-2"></i><strong>Buy in Bulk, Pay Less!</strong> — The more you order, the lower your price per unit. Chat with us for a custom quote.</p>
+            <p><i class="bi bi-boxes me-2"></i><strong>Buy in Bulk, Pay Less!</strong> — The more you order, the lower
+                your price per unit. Chat with us for a custom quote.</p>
             <a class="btn btn-bulk" id="bulk-wa-btn" href="#" target="_blank">
                 <i class="bi bi-whatsapp me-1"></i> Get Your Quote
             </a>
@@ -799,7 +805,8 @@
         <div class="row g-4" id="product-grid"></div>
 
         <div class="custom-request">
-            <p><i class="bi bi-search-heart me-2"></i>Looking for something that's not listed? <strong>Let us know</strong> — we'll try to source it for you.</p>
+            <p><i class="bi bi-search-heart me-2"></i>Looking for something that's not listed? <strong>Let us
+                    know</strong> — we'll try to source it for you.</p>
             <a class="btn btn-bulk" id="custom-request-wa-btn" href="#" target="_blank">
                 <i class="bi bi-whatsapp me-1"></i> Request a Product
             </a>
