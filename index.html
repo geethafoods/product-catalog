@@ -669,7 +669,6 @@
 
         /* CUSTOM REQUEST */
         .custom-request {
-            background: #fff;
             border-radius: 16px;
             padding: 24px;
             text-align: center;
@@ -1023,7 +1022,7 @@
                     const el = document.createElement('div');
                     el.className = 'cart-item';
                     el.innerHTML = `
-          <img class="cart-item-img" src="${imgSrc}" alt="${item.product.name}" onerror="this.src='${placeholder}'"/>
+          <img class="cart-item-img" src="${imgSrc}" alt="${item.product.brand} ${item.product.name}" onerror="this.src='${placeholder}'"/>
           <div class="cart-item-info">
             <div class="cart-item-name">${item.product.brand} ${item.product.name}</div>
             <div class="cart-item-brand">${item.product.category}</div>
