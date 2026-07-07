@@ -936,8 +936,31 @@
             const btnSend = document.getElementById('btn-send-order');
             const cartNote = document.getElementById('cart-note');
 
-            function openCart() { cartDrawer.classList.add('open'); cartOverlay.classList.add('open'); }
-            function closeCart() { cartDrawer.classList.remove('open'); cartOverlay.classList.remove('open'); }
+            let cartHistoryPushed = false;
+
+            function openCart() {
+                cartDrawer.classList.add('open');
+                cartOverlay.classList.add('open');
+                if (!cartHistoryPushed) {
+                    history.pushState({ cartOpen: true }, '');
+                    cartHistoryPushed = true;
+                }
+            }
+            function closeCart() {
+                cartDrawer.classList.remove('open');
+                cartOverlay.classList.remove('open');
+                if (cartHistoryPushed) {
+                    cartHistoryPushed = false;
+                    history.back();
+                }
+            }
+            window.addEventListener('popstate', () => {
+                if (cartHistoryPushed) {
+                    cartHistoryPushed = false;
+                    cartDrawer.classList.remove('open');
+                    cartOverlay.classList.remove('open');
+                }
+            });
 
             document.getElementById('cart-toggle-btn').addEventListener('click', openCart);
             document.getElementById('cart-close').addEventListener('click', closeCart);
