@@ -78,7 +78,7 @@
             font-size: .9rem;
             font-weight: 600;
             box-shadow: 0 4px 20px rgba(26, 107, 60, .35);
-            display: none;
+            display: flex;
             align-items: center;
             gap: 10px;
             cursor: pointer;
@@ -1005,11 +1005,12 @@
 
             function updateCartBadge() {
                 cartBadge.textContent = cart.length;
-                floatCart.classList.toggle('visible', cart.length > 0);
+                cartBadge.style.display = cart.length > 0 ? 'flex' : 'none';
                 btnSend.disabled = cart.length === 0;
                 cartEmpty.style.display = cart.length === 0 ? 'flex' : 'none';
                 cartFooter.style.display = cart.length === 0 ? 'none' : 'flex';
             }
+            updateCartBadge();
 
             function renderCartItems() {
                 // Remove old items (keep empty state el)
@@ -1087,7 +1088,6 @@
                     btn.classList.remove('added');
                 }, 1500);
                 renderCartItems();
-                openCart();
             });
 
             // Cart qty +/- and remove
