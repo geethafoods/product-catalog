@@ -413,6 +413,15 @@
             background: #059669;
         }
 
+        .in-cart-badge {
+            font-size: .74rem;
+            color: var(--green);
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
         /* QUANTITY */
         .qty-select {
             border: 1.5px solid #dee2e6;
@@ -520,7 +529,7 @@
             gap: 10px;
         }
 
-        .cart-empty i {
+        .cart-empty>i {
             font-size: 2.5rem;
         }
 
@@ -677,6 +686,16 @@
 
         .btn-add-more:hover {
             background: var(--green-light);
+        }
+
+        .btn-add-more.btn-compact {
+            width: auto;
+            padding: 6px 16px;
+            line-height: 1.2;
+        }
+
+        .btn-add-more.btn-compact i {
+            font-size: .85rem;
         }
 
         /* NO RESULTS */
@@ -853,7 +872,7 @@
                 <i class="bi bi-bag"></i>
                 <strong>Your cart is empty</strong>
                 <span style="font-size:.82rem">Add products to get started</span>
-                <button class="btn-add-more mt-2" id="add-items-btn">
+                <button class="btn-add-more btn-compact mt-2" id="add-items-btn">
                     <i class="bi bi-plus-lg me-1"></i> Add Items
                 </button>
             </div>
@@ -905,6 +924,9 @@
                 ${[...Array(10).keys()].map(i => `<option value="${i + 1}">${i + 1}</option>`).join('')}
                 <option value="10+">10+</option>
               </select>
+            </div>
+            <div class="in-cart-badge" data-product-id="${product.id}" style="display:none">
+              <i class="bi bi-check-circle-fill me-1"></i>In cart: <span class="in-cart-qty"></span>
             </div>
             <button class="btn-add-cart" data-idx="${idx}">
               <i class="bi bi-bag-plus me-1"></i> Add to Cart
@@ -1064,33 +1086,19 @@
                 updateCartBadge();
             }
 
-            // Sync card qty dropdown from cart state
-            function syncCardQty(productId, qty) {
-                const sel = document.querySelector(`.qty-select[data-product-id="${productId}"]`);
-                if (sel) sel.value = qty;
-            }
-
-            // Sync all card dropdowns from current cart state
-            function syncAllCardQtys() {
-                cart.forEach(item => syncCardQty(item.product.id, item.qty));
-                // Reset cards not in cart back to 1
-                document.querySelectorAll('.qty-select').forEach(sel => {
-                    const inCart = cart.find(i => String(i.product.id) === sel.dataset.productId);
-                    if (!inCart) sel.value = '1';
+            // Show/update "In cart: X" badge on every product card
+            function updateInCartBadges() {
+                document.querySelectorAll('.in-cart-badge').forEach(badge => {
+                    const productId = badge.dataset.productId;
+                    const item = cart.find(i => String(i.product.id) === productId);
+                    if (item) {
+                        badge.style.display = 'flex';
+                        badge.querySelector('.in-cart-qty').textContent = item.qty;
+                    } else {
+                        badge.style.display = 'none';
+                    }
                 });
             }
-
-            // When card qty dropdown changes, update cart if product is already in cart
-            grid.addEventListener('change', e => {
-                const sel = e.target.closest('.qty-select');
-                if (!sel) return;
-                const productId = parseInt(sel.dataset.productId);
-                const existing = cart.find(i => i.product.id === productId);
-                if (existing) {
-                    existing.qty = sel.value;
-                    renderCartItems();
-                }
-            });
 
             // Add numeric quantities, respecting the '10+' cap
             function addQty(current, addBy) {
@@ -1111,17 +1119,19 @@
                 const existing = cart.find(i => i.product.id === product.id);
                 if (existing) {
                     existing.qty = addQty(existing.qty, qty);
-                    syncCardQty(product.id, existing.qty);
                 } else {
                     cart.push({ product, qty });
                 }
-                btn.innerHTML = '<i class="bi bi-check-lg me-1"></i> Added!';
+                btn.innerHTML = existing
+                    ? '<i class="bi bi-check-lg me-1"></i> Updated!'
+                    : '<i class="bi bi-check-lg me-1"></i> Added!';
                 btn.classList.add('added');
                 setTimeout(() => {
                     btn.innerHTML = '<i class="bi bi-bag-plus me-1"></i> Add to Cart';
                     btn.classList.remove('added');
                 }, 1500);
                 renderCartItems();
+                updateInCartBadges();
             });
 
             // Cart qty +/- and remove
@@ -1137,12 +1147,12 @@
                         else cart[i].qty = String(cur - 1);
                     }
                     renderCartItems();
-                    syncAllCardQtys();
+                    updateInCartBadges();
                 }
                 if (rem) {
                     cart.splice(parseInt(rem.dataset.idx), 1);
                     renderCartItems();
-                    syncAllCardQtys();
+                    updateInCartBadges();
                 }
             });
 
