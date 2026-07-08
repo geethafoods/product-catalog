@@ -659,6 +659,26 @@
             cursor: not-allowed;
         }
 
+        .btn-add-more {
+            background: #fff;
+            color: var(--green);
+            border: 1.5px solid var(--green);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: .85rem;
+            font-weight: 600;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background .2s;
+        }
+
+        .btn-add-more:hover {
+            background: var(--green-light);
+        }
+
         /* NO RESULTS */
         #no-results {
             display: none;
@@ -798,9 +818,6 @@
 
     <!-- PRODUCTS GRID -->
     <div class="container my-4">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-            <h2 class="section-title mb-0" id="results-count"></h2>
-        </div>
         <div class="row g-4" id="product-grid"></div>
 
         <div class="custom-request">
@@ -836,9 +853,15 @@
                 <i class="bi bi-bag"></i>
                 <strong>Your cart is empty</strong>
                 <span style="font-size:.82rem">Add products to get started</span>
+                <button class="btn-add-more mt-2" id="add-items-btn">
+                    <i class="bi bi-plus-lg me-1"></i> Add Items
+                </button>
             </div>
         </div>
         <div class="cart-footer" id="cart-footer" style="display:none">
+            <button class="btn-add-more" id="add-more-items-btn">
+                <i class="bi bi-plus-lg me-1"></i> Add More Items
+            </button>
             <textarea class="cart-note" id="cart-note" rows="2" placeholder="Add a note (optional)…"></textarea>
             <button class="btn-send-order" id="btn-send-order">
                 <i class="bi bi-whatsapp"></i> Send Order via WhatsApp
@@ -1000,6 +1023,8 @@
             document.getElementById('cart-toggle-btn').addEventListener('click', openCart);
             document.getElementById('cart-close').addEventListener('click', closeCart);
             cartOverlay.addEventListener('click', closeCart);
+            document.getElementById('add-items-btn').addEventListener('click', closeCart);
+            document.getElementById('add-more-items-btn').addEventListener('click', closeCart);
 
             const floatCart = document.getElementById('cart-toggle-btn');
 
@@ -1067,6 +1092,14 @@
                 }
             });
 
+            // Add numeric quantities, respecting the '10+' cap
+            function addQty(current, addBy) {
+                const cur = current === '10+' ? 10 : parseInt(current);
+                const add = addBy === '10+' ? 10 : parseInt(addBy);
+                const total = cur + add;
+                return total >= 10 ? '10+' : String(total);
+            }
+
             // Add to cart
             grid.addEventListener('click', e => {
                 const btn = e.target.closest('.btn-add-cart');
@@ -1077,7 +1110,8 @@
                 const qty = qtyEl.value;
                 const existing = cart.find(i => i.product.id === product.id);
                 if (existing) {
-                    existing.qty = qty;
+                    existing.qty = addQty(existing.qty, qty);
+                    syncCardQty(product.id, existing.qty);
                 } else {
                     cart.push({ product, qty });
                 }
@@ -1129,7 +1163,6 @@
             const searchClear = document.getElementById('search-clear');
             const noResults = document.getElementById('no-results');
             const noResultsMsg = document.getElementById('no-results-msg');
-            const resultsCount = document.getElementById('results-count');
 
             function applyFilters() {
                 const q = searchQuery.trim().toLowerCase();
@@ -1143,7 +1176,6 @@
                 });
                 noResults.style.display = visible === 0 ? 'block' : 'none';
                 if (visible === 0 && q) noResultsMsg.textContent = `No results for "${searchQuery}" — try a different keyword.`;
-                resultsCount.textContent = visible === 0 ? '' : `${visible} Product${visible !== 1 ? 's' : ''}`;
             }
 
             applyFilters();
