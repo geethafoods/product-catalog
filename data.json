@@ -20,651 +20,651 @@
   "products": [
     {
       "id": 1,
-      "name": "Frozen Chicken 2kgs",
+      "name": "Frozen Chicken",
       "brand": "Generic",
       "category": "Frozen Foods",
-      "description": "Premium quality whole frozen chicken packed in a convenient 2kg size. Freshly frozen to lock in tenderness and flavor, ideal for bulk kitchen preparation, roasting, or curries.",
       "price": 720,
-      "unit": "2kg"
+      "unit": "kg",
+      "weight": 2
     },
     {
       "id": 2,
       "name": "Veg Mayonnaise",
       "brand": "Tasty Pixel",
       "category": "Sauces & Spreads",
-      "description": "Creamy vegetarian mayonnaise with a rich and smooth texture. Perfect as a sandwich spread, burger topping, salad dressing, or dip for snacks.",
       "price": 90,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 3,
       "name": "Corn & Cheese Momos",
       "brand": "A3F",
       "category": "Frozen Snacks",
-      "description": "Delicious frozen momos filled with sweet corn and creamy cheese, wrapped in soft dumpling dough. Ready to steam, pan-fry, or deep-fry for a quick and satisfying snack.",
       "price": 212,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 4,
       "name": "Schezwan Sauce",
       "brand": "Getmore",
       "category": "Sauces & Condiments",
-      "description": "Spicy and flavorful Schezwan sauce made with chili, garlic, and aromatic spices. Perfect for stir-fries, noodles, fried rice, momos, and as a dipping sauce.",
       "price": 150,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 5,
       "name": "French Fries 6MM",
       "brand": "ITC",
       "category": "Frozen Foods",
-      "description": "Premium 6 mm regular-cut frozen French fries made from carefully selected potatoes. Crispy on the outside and fluffy inside when cooked, ideal for restaurants, cafes, and home kitchens.",
       "price": 320,
-      "unit": "2.5kg pack"
+      "unit": "kg",
+      "weight": 2.5
     },
     {
       "id": 6,
       "name": "Veg Burger Patty Supreme",
       "brand": "ITC",
       "category": "Frozen Snacks",
-      "description": "Crispy vegetable burger patties made with a blend of fresh vegetables and savory seasonings. Ready to cook and perfect for burgers, wraps, or quick snacks.",
       "price": 295,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 7,
       "name": "Chicken Burger Patty Supreme",
       "brand": "ITC",
       "category": "Frozen Foods",
-      "description": "Juicy chicken burger patties prepared from premium chicken and seasoned with flavorful spices. Easy to cook and ideal for burgers, sandwiches, and quick meals.",
       "price": 420,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 8,
       "name": "Chicken Wings",
       "brand": "ITC",
       "category": "Frozen Foods",
-      "description": "Tender frozen chicken wings, expertly seasoned and ready to cook. Perfect for grilling, baking, frying, or serving as a delicious appetizer.",
       "price": 445,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 9,
       "name": "Cheesy Corn Triangles",
       "brand": "ITC",
       "category": "Frozen Snacks",
-      "description": "Crunchy triangular snacks filled with creamy cheese and sweet corn. A delicious ready-to-cook snack that's perfect for parties, cafes, and quick bites.",
       "price": 335,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 10,
       "name": "Chicken Nuggets",
       "brand": "ITC",
       "category": "Frozen Foods",
-      "description": "Crispy breaded chicken nuggets made from premium chicken for a juicy bite. Quick to prepare and ideal as a snack, appetizer, or meal accompaniment.",
       "price": 340,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 11,
       "name": "Chicken Popcorn",
       "brand": "ITC",
       "category": "Frozen Foods",
-      "description": "Bite-sized crispy chicken popcorn made from tender chicken pieces coated in a flavorful crunchy crust. Perfect for snacking, sharing, or serving with dips.",
       "price": 350,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 12,
       "name": "Mint Mojito Syrup",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Refreshing mint mojito syrup with a cool minty flavor, perfect for mocktails, sodas, lemonades, and cocktails. Ideal for cafes, restaurants, and home use.",
       "price": 260,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 13,
       "name": "Blue Curacao Syrup",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Premium blue curacao flavored syrup with a vibrant citrus taste and striking blue color. Great for mocktails, cocktails, sodas, and dessert beverages.",
       "price": 260,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 14,
       "name": "Mild & Sweet Sauce",
       "brand": "VB",
       "category": "Sauces & Condiments",
-      "description": "A smooth and mildly sweet sauce that complements burgers, sandwiches, wraps, fries, and snacks. Perfect as a dip or spread.",
       "price": 120,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 15,
       "name": "VB Ketchup 8g",
       "brand": "Tasty Pixel",
       "category": "Sauces & Condiments",
-      "description": "Convenient 8g tomato ketchup sachets made from quality tomatoes with a rich and tangy taste. Ideal for takeaway meals, restaurants, and food service.",
       "price": 60,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 16,
       "name": "Veg Mayonnaise Mild & Sweet",
       "brand": "VB",
       "category": "Sauces & Spreads",
-      "description": "Creamy vegetarian mayonnaise with a mild and slightly sweet flavor. Perfect for burgers, sandwiches, salads, wraps, and as a dipping sauce.",
       "price": 122,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 17,
       "name": "Crunchy Chicken Nuggets",
       "brand": "Generic",
       "category": "Frozen Foods",
-      "description": "Crispy breaded chicken nuggets made from tender chicken pieces. Easy to prepare and ideal as a snack, appetizer, or quick meal.",
       "price": 300,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 18,
       "name": "Chicken Momos",
       "brand": "Nutrich",
       "category": "Frozen Snacks",
-      "description": "Soft dumplings filled with seasoned chicken, ready to steam, pan-fry, or deep-fry. A convenient and delicious snack or appetizer.",
       "price": 140,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 19,
       "name": "Chicken Popcorn",
       "brand": "Nutrich",
       "category": "Frozen Foods",
-      "description": "Bite-sized chicken popcorn coated in a crispy seasoned crust. Perfect for snacking, sharing, or serving with your favorite dips.",
       "price": 350,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 20,
       "name": "Chicken Nuggets",
       "brand": "Nutrich",
       "category": "Frozen Foods",
-      "description": "Premium chicken nuggets with a crispy golden coating and juicy chicken filling. Quick to cook and ideal for snacks or meals.",
       "price": 330,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 21,
       "name": "Chicken Momos",
       "brand": "Zippy",
       "category": "Frozen Snacks",
-      "description": "Delicious frozen chicken momos made with flavorful minced chicken wrapped in soft dumpling dough. Ready to cook in minutes.",
       "price": 160,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 22,
       "name": "Paneer Momos",
       "brand": "A3F",
       "category": "Frozen Snacks",
-      "description": "Frozen momos stuffed with soft paneer and aromatic spices. Perfect for steaming, frying, or pan-searing for a tasty snack.",
       "price": 190,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 23,
       "name": "Veg Momos",
       "brand": "A3F",
       "category": "Frozen Snacks",
-      "description": "Classic vegetable momos filled with a blend of fresh vegetables and seasonings. Ready to cook for a quick and satisfying snack.",
       "price": 150,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 24,
       "name": "Mozzarella Cheese",
       "brand": "Amul",
       "category": "Dairy Products",
-      "description": "Premium mozzarella cheese with a rich, creamy texture and excellent melting properties. Ideal for pizzas, pasta, sandwiches, and baked dishes.",
       "price": 530,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 25,
       "name": "Extra Hot & Spicy Marinade",
       "brand": "ChefStart",
       "category": "Marinades",
-      "description": "A bold and fiery marinade blend with rich spices and herbs, designed to enhance the flavor of chicken, seafood, and vegetables. Perfect for grilling, roasting, and frying.",
       "price": 370,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 26,
       "name": "White Cheese Dressing",
       "brand": "VB",
       "category": "Sauces & Dressings",
-      "description": "Creamy white cheese dressing with a rich, cheesy flavor. Ideal for salads, burgers, wraps, sandwiches, and as a dip for snacks.",
       "price": 190,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 27,
       "name": "BBQ Sauce",
       "brand": "VB",
       "category": "Sauces & Condiments",
-      "description": "Smoky and tangy barbecue sauce with a balanced blend of sweet and savory flavors. Great for grilling, burgers, fries, sandwiches, and marinades.",
       "price": 180,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 28,
       "name": "Pizza & Pasta Sauce",
       "brand": "VB",
       "category": "Sauces & Condiments",
-      "description": "Rich tomato-based pizza and pasta sauce infused with herbs and spices. Perfect for homemade pizzas, pasta dishes, lasagna, and baked recipes.",
       "price": 155,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 29,
       "name": "Tandoori Mayonnaise",
       "brand": "VB",
       "category": "Sauces & Spreads",
-      "description": "Creamy mayonnaise blended with authentic tandoori spices for a smoky and flavorful taste. Ideal for sandwiches, burgers, wraps, and snacks.",
       "price": 230,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 30,
       "name": "Eggless Mayonnaise",
       "brand": "VB",
       "category": "Sauces & Spreads",
-      "description": "Smooth and creamy eggless mayonnaise with a rich taste, suitable for vegetarian recipes. Perfect as a spread, dip, or salad dressing.",
       "price": 120,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 31,
       "name": "Chipotle Dip",
       "brand": "VB",
       "category": "Dips",
-      "description": "Creamy chipotle dip with a smoky, mildly spicy flavor. Ideal for fries, nachos, burgers, wraps, and grilled appetizers.",
       "price": 230,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 32,
       "name": "Black Currant Syrup",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Premium black currant flavored syrup with a rich fruity taste. Perfect for mocktails, milkshakes, sodas, desserts, and beverages.",
       "price": 240,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 33,
       "name": "Litchi Pulp",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Made from quality litchi fruit, this pulp delivers a naturally sweet and refreshing flavor. Ideal for smoothies, mocktails, desserts, and beverages.",
       "price": 240,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 34,
       "name": "Blueberry Crush",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Delicious blueberry crush with a rich fruity flavor and vibrant color. Perfect for milkshakes, mocktails, desserts, ice creams, and refreshing drinks.",
       "price": 430,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 35,
       "name": "Mango Pulp",
       "brand": "Malas",
       "category": "Beverages",
-      "description": "Made from ripe, juicy mangoes, this premium mango pulp delivers a rich tropical flavor. Perfect for smoothies, milkshakes, desserts, mocktails, and beverages.",
       "price": 240,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 36,
       "name": "Pizza & Pasta Sauce",
       "brand": "Getmore",
       "category": "Sauces & Condiments",
-      "description": "Flavorful tomato-based pizza and pasta sauce blended with herbs and spices. Ideal for pizzas, pasta, lasagna, sandwiches, and other Italian-inspired dishes.",
       "price": 150,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 37,
       "name": "Schezwan Chutney",
       "brand": "Xinng",
       "category": "Sauces & Condiments",
-      "description": "Authentic Schezwan chutney with a bold blend of red chilies, garlic, and spices. Perfect as a dip, spread, or cooking ingredient for noodles, fried rice, momos, and snacks.",
       "price": 200,
-      "unit": "kg"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 38,
       "name": "Peri Peri Sprinkler",
       "brand": "Chefs Art",
       "category": "Seasonings",
-      "description": "A zesty peri peri seasoning blend with a balanced mix of spices and herbs. Sprinkle over fries, popcorn, burgers, grilled meats, and snacks for an extra kick of flavor.",
       "price": 150,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 39,
       "name": "Tomato Ketchup Sachets 8g",
       "brand": "Foodrite",
       "category": "Sauces & Condiments",
-      "description": "Convenient 8g tomato ketchup sachets with a rich, tangy tomato flavor. Ideal for takeaway orders, restaurants, cafeterias, and food service applications.",
       "price": 60,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 40,
-      "name": "Tomato Ketchup 200g",
+      "name": "Tomato Ketchup",
       "brand": "SIL",
       "category": "Sauces & Condiments",
-      "description": "Classic tomato ketchup made from quality tomatoes for a rich and tangy taste. Perfect for snacks, burgers, sandwiches, fries, and everyday meals.",
       "price": 80,
-      "unit": "pack"
+      "unit": "kg",
+      "weight": 0.2
     },
     {
       "id": 41,
       "name": "French Fries",
       "brand": "Geetha Foods",
       "category": "Frozen Foods",
-      "description": "Premium fresh frozen French fries made from carefully selected potatoes for consistent quality and crispiness without any chemicals/preservatives. Ready to fry or bake for a delicious snack or side dish.",
       "price": 145,
-      "unit": "kg"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 42,
       "name": "Paneer Momos",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Premium frozen momos filled with fresh minced paneer and savory herbs. Ready to steam or fry for a fast, delicious vegetarian snack.",
       "price": 190,
-      "unit": "500g pack"
+      "unit": "kg",
+      "weight": 0.5
     },
     {
       "id": 43,
       "name": "Veg Momos",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Delicious steamed vegetable dumplings with a savory mix of fresh greens. Quick-frozen to seal in authentic flavor and moisture.",
       "price": 150,
-      "unit": "500g pack"
+      "unit": "kg",
+      "weight": 0.5
     },
     {
       "id": 44,
       "name": "Chicken Breakfast Sausage",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Tender, juicy breakfast sausages made from finely minced chicken and choice seasoning spices. Perfect for breakfast platters or rolls.",
       "price": 300,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 45,
       "name": "Chicken Breaded Lollipop",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Crispy, breaded chicken lollipops designed for commercial kitchen frying. Features premium cuts with a golden, crunchy outer coat.",
       "price": 430,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 46,
       "name": "Chicken Breaded wings",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Seasoned chicken wings coated in light, crispy golden breadcrumbs. Ready to deep fry or bake as a delicious restaurant starter.",
       "price": 420,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 47,
       "name": "Chicken Breaded strips",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Crunchy breaded chicken breast strips prepared for consistent texture and flavor. Ideal for appetizer platters, sliders, or kids' menus.",
       "price": 420,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 48,
       "name": "Chicken Bites",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Bite-sized chunks of tender chicken meat lightly seasoned and coated. High-yield convenience product for snacks, quick meals, or appetizers.",
       "price": 380,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 49,
       "name": "Potato Mini kieves",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Miniature savory potato bites infused with aromatic butter, herbs, and garlic filling. Perfect crowd-pleasing finger food or side dish.",
       "price": 320,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 50,
       "name": "Chicken kieves",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Classic breaded chicken kiev pieces stuffed with rich garlic herb butter. Perfectly crispy on the outside and bursting with hot butter inside.",
       "price": 390,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 51,
       "name": "Chicken popcorn",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Miniature breaded chicken popcorn snacks with a peppery crunch. Convenient quick-fry item optimized for high-volume quick service restaurants.",
       "price": 350,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 52,
       "name": "Chicken Burger patty",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Seasoned, savory chicken burger patties with excellent texture retention. Ready-to-cook pack designed specifically for commercial grills and fryers.",
       "price": 350,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 53,
       "name": "Veg Burger Patty",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Crispy vegetarian burger patties packed with a selection of real vegetables and Indian spices. Easy to grill or shallow fry.",
       "price": 220,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 54,
       "name": "Chicken cheese garlic finger",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Delicious snack fingers combining minced chicken, rich cheese, and sharp garlic notes. Encased in a golden-brown crispy crust.",
       "price": 350,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 55,
       "name": "Crunchy Chicken Nuggets",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Premium wholesale package of crunchy breaded chicken nuggets. Stays crisp for a long time, perfect for fast-food operations.",
       "price": 320,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 56,
       "name": "Chicken Popcorn",
       "brand": "ADP",
       "category": "Frozen Foods",
-      "description": "Delicious bite-sized crisp chicken bits with a savory breading coat. Quick to fry and pair with commercial dipping sauces.",
       "price": 350,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 57,
       "name": "Veg spring rolls",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Crispy oriental vegetable spring rolls packed with thinly sliced fresh carrots, cabbage, and sprouts. Pack contains 40 pre-rolled uniform pieces.",
       "price": 320,
-      "unit": "1kg pack"
+      "unit": "kg",
+      "weight": 1
     },
     {
       "id": 58,
       "name": "Veg Nuggets",
       "brand": "ADP",
       "category": "Frozen Snacks",
-      "description": "Vegetable-based crunchy nuggets crafted from quality potatoes, corn, and greens. Golden crunchy shell with an airy seasoned core.",
       "price": 240,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 59,
       "name": "Cheese and jalapeno dip",
       "brand": "VB",
       "category": "Dips",
-      "description": "Zesty, rich cheese-based sauce infusing tangy jalapeño pepper bits. Ideal pairing for Mexican dishes, hot fries, or burger toppings.",
       "price": 175,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 60,
       "name": "Aloo Tikki",
       "brand": "ITC",
       "category": "Frozen Snacks",
-      "description": "Traditional crispy golden aloo tikkis made from mashed potatoes blended with local spices. Large 1.5kg bulk configuration built for event catering.",
       "price": 270,
-      "unit": "1.5kg pack"
+      "unit": "kg",
+      "weight": 1.5
     },
     {
       "id": 61,
       "name": "Chilli Garlic Potato shotz",
       "brand": "Hungritoes",
       "category": "Frozen Snacks",
-      "description": "Zesty bite-sized potato snacks seasoned with a robust blend of red chili flakes and pungent garlic. Explodes with hot flavor upon deep frying.",
       "price": 270,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 62,
       "name": "Batata vada",
       "brand": "ITC",
       "category": "Frozen Snacks",
-      "description": "Authentic Mumbai-style batata vadas filled with spiced mashed potato balls coated inside a thick gram flour batter shell.",
       "price": 200,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 63,
       "name": "onion rings",
       "brand": "McCain",
       "category": "Frozen Snacks",
-      "description": "Sweet, uniform fresh onion rings enveloped in a light crunchy specialty batter. Stays crisp and perfect for gourmet burgers or appetizer platters.",
       "price": 260,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 64,
       "name": "French Fries 9MM",
       "brand": "Hungritoes",
       "category": "Frozen Foods",
-      "description": "Classic 9mm thick-cut premium frozen french fries. Offers maximum internal fluffy potato flesh and consistent outer crispiness.",
       "price": 320,
-      "unit": "2.5kg pack"
+      "unit": "kg",
+      "weight": 2.5
     },
     {
       "id": 65,
       "name": "French Fries 6MM",
       "brand": "Hungritoes",
       "category": "Frozen Foods",
-      "description": "Thin, fast-frying 6mm shoestring style frozen french fries. Maximizes plate coverage and yields extra crunch per serving portion.",
       "price": 320,
-      "unit": "2.5kg pack"
+      "unit": "kg",
+      "weight": 2.5
     },
     {
       "id": 66,
       "name": "frozen sweetcorn",
       "brand": "Generic",
       "category": "Frozen Foods",
-      "description": "Tender and naturally sweet whole corn kernels, individually quick-frozen to preserve peak freshness and golden color.",
       "price": 75,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 67,
       "name": "Veg Burger Patty Regular",
       "brand": "ITC",
       "category": "Frozen Snacks",
-      "description": "Standard size seasoned vegetable burger patties. An essential high-volume product option perfect for neighborhood cafes and student diners.",
       "price": 192,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 68,
       "name": "Favourita 9mm",
       "brand": "McCain",
       "category": "Frozen Foods",
-      "description": "High-yield 9mm potato fries designed for continuous catering operations. Features extended hot-holding capabilities without turning soggy.",
       "price": 320,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 69,
       "name": "450 ml Containers",
       "brand": "Generic",
       "category": "Kitchen Supplies",
-      "description": "Durable, food-grade clear plastic containers with secure lids. Ideal for portion control, packaging hot gravies, takeaways, or food storage.",
       "price": 220,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 70,
       "name": "oregano veeba 300 pcs",
       "brand": "Veeba",
       "category": "Sauces & Condiments",
-      "description": "Wholesale distribution box containing 300 individual pizza-cut single-use oregano seasoning sachets. Crucial for cloud kitchens and pizza chains.",
       "price": 175,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 71,
       "name": "chilli flakes veeba 300pcs",
       "brand": "Veeba",
       "category": "Sauces & Condiments",
-      "description": "Wholesale catering box containing 300 single-portion dry crushed red chili flake sachets. Premium grade, dried to maximize flavor heat.",
       "price": 170,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     },
     {
       "id": 72,
       "name": "mayo sachets 8gms",
       "brand": "Foodrite",
       "category": "Sauces & Spreads",
-      "description": "Individual 8g takeaway sachets of smooth and creamy commercial mayo. Designed specifically to reduce serving wastage in quick-delivery meals.",
       "price": 175,
-      "unit": "pack"
+      "unit": "pc",
+      "weight": 1
     }
   ]
 }
