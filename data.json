@@ -3,7 +3,7 @@
     "name": "GeethaFoods Co.",
     "tagline": "Fresh & Frozen Food Supply",
     "description": "Premium quality fresh and frozen produce for businesses and households. Browse our catalog and order directly via WhatsApp.",
-    "whatsapp": "91 9398716314",
+    "whatsapp": "919398716314",
     "phone": "+91 9948695861",
     "address": "Kompally, Hyderabad",
     "email": "info.geethafoods@gmail.com",
@@ -665,6 +665,15 @@
       "price": 175,
       "unit": "pc",
       "weight": 1
-    }
+    },
+    {
+      "id": 73,
+      "name": "GoldDrop Oil",
+      "brand": "GoldDrop",
+      "category": "Oils",
+      "price": 172,
+      "unit": "L",
+      "weight": 1
+    },
   ]
 }
