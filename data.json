@@ -294,7 +294,7 @@
       "brand": "VB",
       "category": "Dips",
       "price": 230,
-      "unit": "pc",
+      "unit": "kg",
       "weight": 1
     },
     {
@@ -303,8 +303,8 @@
       "brand": "Malas",
       "category": "Beverages",
       "price": 240,
-      "unit": "pc",
-      "weight": 1
+      "unit": "ml",
+      "weight": 1000
     },
     {
       "id": 33,
@@ -312,8 +312,8 @@
       "brand": "Malas",
       "category": "Beverages",
       "price": 240,
-      "unit": "pc",
-      "weight": 1
+      "unit": "ml",
+      "weight": 1000
     },
     {
       "id": 34,
@@ -321,8 +321,8 @@
       "brand": "Malas",
       "category": "Beverages",
       "price": 430,
-      "unit": "pc",
-      "weight": 1
+      "unit": "ml",
+      "weight": 1000
     },
     {
       "id": 35,
@@ -330,8 +330,8 @@
       "brand": "Malas",
       "category": "Beverages",
       "price": 240,
-      "unit": "pc",
-      "weight": 1
+      "unit": "ml",
+      "weight": 1000
     },
     {
       "id": 36,
@@ -339,7 +339,7 @@
       "brand": "Getmore",
       "category": "Sauces & Condiments",
       "price": 150,
-      "unit": "pc",
+      "unit": "kg",
       "weight": 1
     },
     {
@@ -357,8 +357,8 @@
       "brand": "Chefs Art",
       "category": "Seasonings",
       "price": 150,
-      "unit": "pc",
-      "weight": 1
+      "unit": "gms",
+      "weight": 250
     },
     {
       "id": 39,
