@@ -3,7 +3,7 @@
     "name": "GeethaFoods Co.",
     "tagline": "Fresh & Frozen Food Supply",
     "description": "Premium quality fresh and frozen produce for businesses and households. Browse our catalog and order directly via WhatsApp.",
-    "whatsapp": "919948695861",
+    "whatsapp": "91 9398716314",
     "phone": "+91 9948695861",
     "address": "Kompally, Hyderabad",
     "email": "info.geethafoods@gmail.com",
@@ -20,12 +20,12 @@
   "products": [
     {
       "id": 1,
-      "name": "Frozen Chicken",
-      "brand": "Generic",
+      "name": "Crispy Chicken Fries",
+      "brand": "ITC",
       "category": "Frozen Foods",
-      "price": 720,
+      "price": 400,
       "unit": "kg",
-      "weight": 2
+      "weight": 1
     },
     {
       "id": 2,
